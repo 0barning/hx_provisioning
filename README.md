@@ -17,7 +17,6 @@ In this example, we cover a simple use case that the Intersight Platform and Ter
 2. An Intersight Assist appliance that is connected to your Intersight environment
 3. Terraform Cloud Business Tier Account
 4. vCenter Server Access
-5. DHCP server to allocate ip addresses dynamically
 5. GitHub account to host your Terraform code
 
 
@@ -39,7 +38,7 @@ Once the target is created, the agent can be added assist.
 
 ### Create GitHub Repo
 
-1. Go to https://github.com/CiscoDevNet/ist-cookbook/tree/main/vm_provision
+1. Go to https://github.com/CiscoDevNet/ist-cookbook/tree/main/hx_deployment
 2. Fork it into your own GitHub account
 
 ### Datacenter Prep
@@ -54,22 +53,34 @@ Once the target is created, the agent can be added assist.
 
 | Key                |   Value          | Type         |
 |--------------------|------------------|--------------|
-| vsphere_server | 10.x.x.x||
-| vsphere_user | administrator@vsphere.local||
-| vsphere_password | ******** | Sensitive |
-| datacenter | SJC19 ||
-| resource_pool | IntersightPool ||
-| datacenter | SJC19 ||
-| resource_pool | IntersightPool ||
-| datastore_name | nfs-datastore-0 ||
-| network_name | vlan1238 ||
-| template_name | MO-CENTOS7"
-| vm_prefix | momagic ||
-| vm_folder | momagic ||
-| vm_count | 2 ||
-| vm_domain | cisco.com ||
-| vm_cpu | 2 ||
-| vm_memory | 2048 ||
+| organization | default ||
+| password | administrator@vsphere.local||
+| env | ******** | Sensitive |
+| dns_domain_suffix | SJC19 ||
+| vm_vlans | IntersightPool ||
+| mgmt_vlan | SJC19 ||
+| vmotion_vlan | IntersightPool ||
+| hxdp_vlan | nfs-datastore-0 ||
+| vcenter_url | vlan1238 ||
+| vcenter_username | MO-CENTOS7"
+| vcenter_password | momagic ||
+| dns_server | momagic ||
+| ntp_server | 2 ||
+| kvm_start | cisco.com ||
+| kvm_end | 2 ||
+| kvm_netmask | 2048 ||
+| kvm_gateway | 10.x.x.x||
+| timezone | administrator@vsphere.local||
+| esxi_start | ******** | Sensitive |
+| esxi_end | SJC19 ||
+| esxi_netmask | IntersightPool ||
+| esxi_gateway | SJC19 ||
+| hxdp_start | IntersightPool ||
+| hxdp_end | nfs-datastore-0 ||
+| hxdp_netmask | vlan1238 ||
+| hxdp_gateway | MO-CENTOS7"
+| hxdp_cluster | momagic ||
+| hxdp_cluster_name | momagic ||
 
  ![Queue Terraform Plan](images/TFVariables.png)
 

@@ -1,0 +1,34 @@
+api_key=""
+secretkey=<<EOT
+-----BEGIN RSA PRIVATE KEY-----
+
+-----END RSA PRIVATE KEY-----
+EOT
+organization=""
+password=""
+env=""
+dns_domain_suffix=""
+vm_vlans = [1,2,3]
+mgmt_vlan = 10
+vmotion_vlan = 11
+hxdp_vlan = 12
+vcenter_url=""
+vcenter_username=""
+vcenter_password=""
+dns_server=""
+ntp_server=""
+kvm_start=""
+kvm_end=""
+kvm_netmask=""
+kvm_gateway=""
+timezone="Europe/Amsterdam"
+esxi_start=""
+esxi_end=""
+esxi_netmask=""
+esxi_gateway=""
+hxdp_start=""
+hxdp_end=""
+hxdp_netmask=""
+hxdp_gateway=""
+hxdp_cluster=""
+hxdp_cluster_name=""

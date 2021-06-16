@@ -32,7 +32,6 @@ organization="TF-MAC"
 password="C!sco12345"
 env="ITS-Cookbook"
 dns_domain_suffix="tst.workload.local"
-subnet_str="10.9.101"
 vm_vlans = [10,11,12,13,50,456,345]
 mgmt_vlan = 10
 vmotion_vlan = 11
