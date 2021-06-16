@@ -54,33 +54,33 @@ Once the target is created, the agent can be added assist.
 | Key                |   Value          | Type         |
 |--------------------|------------------|--------------|
 | organization | default ||
-| password | administrator@vsphere.local||
-| env | ******** | Sensitive |
-| dns_domain_suffix | SJC19 ||
-| vm_vlans | IntersightPool ||
-| mgmt_vlan | SJC19 ||
-| vmotion_vlan | IntersightPool ||
-| hxdp_vlan | nfs-datastore-0 ||
-| vcenter_url | vlan1238 ||
-| vcenter_username | MO-CENTOS7"
-| vcenter_password | momagic ||
-| dns_server | momagic ||
-| ntp_server | 2 ||
-| kvm_start | cisco.com ||
-| kvm_end | 2 ||
-| kvm_netmask | 2048 ||
-| kvm_gateway | 10.x.x.x||
-| timezone | administrator@vsphere.local||
-| esxi_start | ******** | Sensitive |
-| esxi_end | SJC19 ||
-| esxi_netmask | IntersightPool ||
-| esxi_gateway | SJC19 ||
-| hxdp_start | IntersightPool ||
-| hxdp_end | nfs-datastore-0 ||
-| hxdp_netmask | vlan1238 ||
-| hxdp_gateway | MO-CENTOS7"
-| hxdp_cluster | momagic ||
-| hxdp_cluster_name | momagic ||
+| password | ******| Senstive |
+| env | ITS ||
+| dns_domain_suffix | itscookbook.local ||
+| vm_vlans | 1,2,3,4 ||
+| mgmt_vlan | 10 ||
+| vmotion_vlan | 11 ||
+| hxdp_vlan | 12 ||
+| vcenter_url | vcenter.itscookbook.local ||
+| vcenter_username | vcenter.itscookbook.local ||
+| vcenter_password | ******** | sesitive |
+| dns_server | 10.9.10.3 ||
+| ntp_server | 10.9.10.3 ||
+| kvm_start | 10.9.10.200 ||
+| kvm_end | 10.9.10.210 ||
+| kvm_netmask | 255.255.255.0 ||
+| kvm_gateway | 10.9.10.1 ||
+| timezone | Europe/Amsterdam||
+| esxi_start | 10.9.10.20 ||
+| esxi_end | 10.9.10.29 ||
+| esxi_netmask | 255.255.255.0 ||
+| esxi_gateway | 10.9.10.1 ||
+| hxdp_start | 10.9.10.30 ||
+| hxdp_end | 10.9.10.39 ||
+| hxdp_netmask | 255.255.255.0 ||
+| hxdp_gateway | 10.9.10.1 ||
+| hxdp_cluster | 10.9.10.50 ||
+| hxdp_cluster_name | HX-ITSCookBook ||
 
  ![Queue Terraform Plan](images/TFVariables.png)
 
